@@ -1,0 +1,16 @@
+{%extends 'main/main.html'%}
+{%block content%}
+    <h1>Speech Events</h1>
+    <a href="{% url 'create_event' %}">Create Event</a>
+    <ul>
+        {% for event in events %}
+            <li>
+                {{ event.name }} - {{ event.date }} <br>
+                {{ event.description }} <br>
+                <a href="{% url 'update_event' event.id %}">Edit</a>
+                <a href="{% url 'delete_event' event.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {%endblock content%}
+
