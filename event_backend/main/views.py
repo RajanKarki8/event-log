@@ -41,9 +41,6 @@ def create_event(request):
         return redirect('index')
     return render(request, 'main/create.html')
 
-class Meta:
-    ordering=['-date']
-
 def update_event(request, event_id):
     events = read_data()
     event = next((event for event in events if event['id'] == event_id), None)
