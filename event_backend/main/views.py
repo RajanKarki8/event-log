@@ -2,8 +2,6 @@ import json
 from pathlib import Path
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from django.db import models
-from django.utils import timezone
 
 json_file_path = Path('data.json')
 
