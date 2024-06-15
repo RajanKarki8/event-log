@@ -4,14 +4,14 @@
     <div class='container'>
     <form method="post">
         {% csrf_token %}
-        <label for="speaker_name">Speaker   Name:</label><br>
+        <label for="speaker_name">Speaker Name:</label><br>
         <input type="text" id="speaker_name" name="speaker_name"><br>
         <label for="speech_title">Speech Title:</label><br>
         <input type="text" id="speech_title" name="speech_title"><br>
         <label for="description">Description:</label><br>
         <textarea id="description" name="description"></textarea><br>
-        <label for="audience">Audience:</label><br>
-        <input type="number" id="audience" name="audience"><br>
+        <label for="total_audience">Audience:</label><br>
+        <input type="number" id="total_audience" name="total_audience"><br>
         <label for="date">Date:</label><br>
         <input type="date" id="date" name="date"><br><br>
 
@@ -21,7 +21,7 @@
             <option value="female">Female</option>
             <option value="other">Other</option>
         </select><br>
-<br>
+        <br>
         <label for="Genre">Genre:</label>
         <select name="Genre" id="Genre" required>
             <option value="agri">Agriculture</option>

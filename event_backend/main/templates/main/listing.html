@@ -5,7 +5,7 @@
     <ul>
         {% for event in events %}
             <li>
-                {{ event.name }} - {{ event.date }} <br>
+                {{ event.name }} - {{ event.date }}<br>
                 {{ event.description }} <br>
                 <a href="{% url 'update_event' event.id %}">Edit</a>
                 <a href="{% url 'delete_event' event.id %}">Delete</a>

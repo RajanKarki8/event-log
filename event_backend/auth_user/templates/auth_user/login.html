@@ -1,0 +1,12 @@
+{%extends 'main/main.html'%}
+
+{%block content%}
+<h3>Speech event User LoginForm</h3><hr>
+<form action="" method = 'POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class='btn btn-primary btn-sm' value="login">Login</button>
+</form><hr>
+<p>Don't Have an Account!</p><a href="{%url 'register'%}">Register</a>
+
+{%endblock content%}
