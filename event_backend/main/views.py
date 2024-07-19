@@ -58,7 +58,6 @@ def update_event(request, pk):
         return redirect('index')
     return render(request, 'main/update.html', {'event': event})
 
-@login_required(login_url='/login')
 def delete_event(request, pk):
     events = read_data()
     events = [event for event in events if event['id'] != pk]

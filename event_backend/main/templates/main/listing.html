@@ -4,13 +4,14 @@
     <a href="{% url 'create_event' %}">Create Event</a>
     <ul>
         {% for event in events %}
-            <li>
-                {{ event.name }} - {{ event.date }}<br>
+            <p>
+                {{ event.speech_title }} by {{event.speaker_name}} on {{ event.date }}<br>
                 {{ event.description }} <br>
+                Genre: {{event.Genre}}<br>
                 <a href="{% url 'update_event' event.id %}">Edit</a>
                 <a href="{% url 'delete_event' event.id %}">Delete</a>
-            </li>
+            </p>
         {% endfor %}
     </ul>
-    {%endblock content%}
+{%endblock content%}
 
